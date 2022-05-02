@@ -61,7 +61,7 @@ for col in cat_cols:
 #############################################
 
 
-# Missing value silme
+# Missing value deletion
 df.isnull().values.any()
 df = df.dropna()
 
@@ -85,7 +85,7 @@ df[df_scores < th].shape
 df[df_scores < th].index
 
 
-# LOF silme
+# Local outlier factor deletion
 
 df.shape
 
@@ -124,7 +124,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,
 reg_model = LinearRegression()
 reg_model.fit(X_train, y_train)
 
-# sabit (b - bias)
+# constant (b - bias)
 reg_model.intercept_
 
 # coefficients (w - weights)
@@ -156,11 +156,11 @@ reg_model.score(X_train, y_train)
 # Test RKARE
 reg_model.score(X_test, y_test)
 
-# 10 Katlı CV RMSE
+# 10 fold CV RMSE
 np.mean(np.sqrt(-cross_val_score(reg_model, X, y, cv=10, scoring="neg_mean_squared_error")))
 
 
-#soru
+# questiob
 df_with_predictions = pd.DataFrame(y_test)
 df_with_predictions["y_pred"] = y_pred
 
