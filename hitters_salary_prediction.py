@@ -160,7 +160,7 @@ reg_model.score(X_test, y_test)
 np.mean(np.sqrt(-cross_val_score(reg_model, X, y, cv=10, scoring="neg_mean_squared_error")))
 
 
-# questiob
+# question
 df_with_predictions = pd.DataFrame(y_test)
 df_with_predictions["y_pred"] = y_pred
 
