@@ -25,7 +25,7 @@ pd.set_option('display.width', 500)
 
 
 def load():
-    data = pd.read_csv("Hafta07/hitters.csv")
+    data = pd.read_csv("hitters.csv")
     return data
 
 df = load()
