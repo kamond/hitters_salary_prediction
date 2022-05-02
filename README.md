@@ -1,5 +1,7 @@
 # hitters_salary_prediction_with_linear_regression
+
 hitters_salary_prediction_with_linear_regression
+
 end to end ML pipeline for predicition of salaries using various machine learning algirthms with ensemble voting.
 
 
